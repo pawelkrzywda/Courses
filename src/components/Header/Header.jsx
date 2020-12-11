@@ -6,7 +6,7 @@ import { StoreContext } from '../../store/StoreProvider';
 import { default as HeaderStyles } from './Header.module.scss';
 import LoginForm from '../LoginForm/LoginForm';
 
-const headerStyle = bemCssModules(HeaderStyles);
+const style = bemCssModules(HeaderStyles);
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,9 +23,9 @@ const Header = () => {
   const setProperlyLabel = Boolean(user) ? 'Wyloguj się' : 'Zaloguj się';
 
   return (
-    <header className={headerStyle()}>
-      <div className={headerStyle('logo-wrapper')} />
-      <h1 className={headerStyle('title')}>Super kursy dla programistów</h1>
+    <header className={style()}>
+      <div className={style('logo-wrapper')} />
+      <h1 className={style('title')}>Super kursy dla programistów</h1>
       <button onClick={handleOnClick}>{setProperlyLabel}</button>
       <LoginForm handleOnClose={handleOnClose} isModalOpen={isModalOpen} />
     </header>
