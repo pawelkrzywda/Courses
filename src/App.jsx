@@ -8,6 +8,8 @@ import AsideMenu from './components/AsideMenu/AsideMenu';
 import './App.scss';
 import Content from './components/Content/Content';
 
+
+
 const App = () => (
   <StoreProvider>
     <Header />

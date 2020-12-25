@@ -1,6 +1,7 @@
 .course-popup{
   display: flex;
   flex-direction: column;
+  max-width: 500px;
 
   &__form{
     display: flex;
@@ -12,7 +13,6 @@
   }
 
   &__input{
-    display: flex;
-    flex-grow: 1;
+    width:500px;
   }
 }

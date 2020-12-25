@@ -1,8 +1,13 @@
 .aside-menu{
   padding: 15px;
-  width: 200px;
+  min-width: 200px;
+  max-width:200px;
+  width:200px;
   background-color: #ddd;
   position: relative;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
 
   &__nav-wrapper{
     position: sticky;
@@ -24,6 +29,7 @@
   }
 
   &:hover{
-    background-color: #f00;
+    background-color: #999;
+    color:white;
   }
 }

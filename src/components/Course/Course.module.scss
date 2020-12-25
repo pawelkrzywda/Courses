@@ -7,9 +7,19 @@ background-color: #ddd;
 border-radius: 5px;
 list-style: none;
 
+button{
+  font-size: 15px;
+  padding: 5px;
+  margin: 10px 0 0 15px;
+}
+
 &__title{
   text-align: center;
   margin-bottom: 10px;
+  font-size: 23px;
+  height: 70px;
+  // line-height: 70px;
+  vertical-align: middle;
 }
 
 &__image{
@@ -20,6 +30,7 @@ list-style: none;
 &__price,
 &__authors{
   margin: 10px 0 0 15px;
+  font-size: 18px;
 }
 
 }
