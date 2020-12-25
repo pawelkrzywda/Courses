@@ -1,11 +1,11 @@
-Uøytkownicy:
+U≈ºytkownicy:
 1.
   Login: User
-  Has≥o: 123456
+  Has≈Ço: 123456
 
 2.
   Login: Admin
-  Has≥o: ******
+  Has≈Ço: ******
 
 
 -----------------------------------------------
@@ -14,17 +14,17 @@ Base url: http://localhost:8000
 
 Endpoint: '/users'
 
-1. Metoda POST (logowanie uøytkownika):
+1. Metoda POST (logowanie u≈ºytkownika):
   body: {
     login: string,
     password: string,
   }
 
   responses:
-    - status: 404, message: 'Uøytkownik o podanym loginie nie istnieje'
-    - status: 401, message: 'Has≥o lub login siÍ nie zgadza',
+    - status: 404, message: 'U≈ºytkownik o podanym loginie nie istnieje'
+    - status: 401, message: 'Has≈Ço lub login siƒô nie zgadza',
     - status: 200, data: user(object)
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie POST w endpointcie /users'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie POST w endpointcie /users'
 
 2. Metoda PATCH (zakup kursu):
   body: {
@@ -36,19 +36,19 @@ Endpoint: '/users'
     - status: 404, message: 'Nie znaleziono kursu o podanym Id'
     - status: 404, message: 'Nie znaleziono uzytkownika o podanym loginie',
     - status: 200, data: user(object)
-    - status: 403, message: 'Uzytkownik nie posiada wystarczajπcych funduszy',
+    - status: 403, message: 'Uzytkownik nie posiada wystarczajƒÖcych funduszy',
     - status: 202, data: user(object)
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie PATCH w endpointcie /users'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie PATCH w endpointcie /users'
 
 Endpoint: '/courses'
 
-1. Metoda GET (pobranie wszystkich kursÛw)
+1. Metoda GET (pobranie wszystkich kurs√≥w)
 
   responses:
     - status: 200, data: courses(object[])
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie GET w endpointcie /courses'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie GET w endpointcie /courses'
 
-2. Metoda PUT (przes≥anie zaktualizowanego kursu)
+2. Metoda PUT (przes≈Çanie zaktualizowanego kursu)
   body: {
     authors: string[],
     id: string,
@@ -61,7 +61,7 @@ Endpoint: '/courses'
     - status: 400, message: 'Nie podano wszystkich wymaganych informacji'
     - status: 404, message: 'Nie znaleziono kursu o podanym id'
     - status: 202, data: courses(object[])
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie PUT w endpointcie /courses'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie PUT w endpointcie /courses'
 
 3. Metoda POST (tworzenie nowego kursu)
   body: {
@@ -73,9 +73,9 @@ Endpoint: '/courses'
 
   responses:
     - status: 400, message: 'Nie podano wszystkich wymaganych informacji'
-    - status: 409, message: 'Istnieje juø w bazie kurs ${title}'
+    - status: 409, message: 'Istnieje ju≈º w bazie kurs ${title}'
     - status: 201, data: courses(object[])
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie POST w endpointcie /courses'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie POST w endpointcie /courses'
 
 4. Metoda DELETE (usuwanie kursu)
   params: '/courses/:id'
@@ -83,11 +83,11 @@ Endpoint: '/courses'
   responses:
     - status: 404, message: 'Nie znaleziono kursu o podanym id'
     - status: 200
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie DELETE w endpointcie /courses/:id'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie DELETE w endpointcie /courses/:id'
 
-5. Metoda GET (pobranie pojedyÒczego kursu)
+5. Metoda GET (pobranie pojedy≈Ñczego kursu)
   params: '/courses/:id'
 
   responses:
     - status: 200, data: course(object)
-    - status: 500, message: 'Oops! Coú posz≥o nie tak, przy metodzie GET w endpointcie /courses/:id'
+    - status: 500, message: 'Oops! Co≈õ posz≈Ço nie tak, przy metodzie GET w endpointcie /courses/:id'
